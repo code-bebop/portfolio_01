@@ -1,55 +1,16 @@
-function navEvent() {
-  const navItem = $(".footer__nav__list-item > a"),
-    contents = {
-          "HTML" : [
-            {
-              id : 0,
-              desc : "HTML is ..."
-            }
-          ],
-          "CSS" : [
-            {
-              id : 1,
-              desc : "CSS is ..."
-            }
-          ],
-          "JS" : [
-            {
-              id : 2,
-              desc : "JavaScript is ..."
-            }
-          ]
-        };
+function contactFormEvent() {
+  const openBtn = $(".contact-btn")[0],
+    closeBtn = $(".contact-modal__close")[0];
   
-  for(let i=0; i<navItem.length; i++) {
-    navItem[i].addEventListener("click", (e)=>{
-      e.preventDefault();
-      const data = e.target.innerText,
-        background = $("body")[0],
-        infoBtn = $(".btn-list__item"),
-        content = $(".section_info__body")[0];
-      
-      if(data==="HTML"){
-        content.innerText = contents.HTML[0].desc;
-        background.style.backgroundColor = "#FFE9E8";
-        infoBtn.each((index, item)=>{
-          item.style.backgroundColor = "#7EDF9C";
-        })
-      } else if (data==="CSS") {
-        content.innerText = contents.CSS[0].desc;
-        background.style.backgroundColor = "#FFF9D9";
-        infoBtn.each((index, item)=>{
-          item.style.backgroundColor = "#7671E3";
-        })
-      } else if (data==="JS") {
-        content.innerText = contents.JS[0].desc;
-        background.style.backgroundColor = "#DFF4FF";
-        infoBtn.each((index, item)=>{
-          item.style.backgroundColor = "#D6BA96";
-        })
-      }
-    })
-  }
+  openBtn.addEventListener("click", (e)=>{
+    e.preventDefault();
+    $(".contact-modal").addClass("on");
+  })
+  
+  closeBtn.addEventListener("click", (e)=>{
+    e.preventDefault();
+    $(".contact-modal").removeClass("on");
+  })
 }
 
 function navFold() {
@@ -86,7 +47,7 @@ function init() {
   slick();
   pagingInfo();
   navFold();
-  navEvent();
+  contactFormEvent();
 }
 
 $(document).ready(init());

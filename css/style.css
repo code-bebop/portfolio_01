@@ -7,10 +7,12 @@
 body {
   background: #F4EEFF;
   font-family: 'NanumSquare', sans-serif !important;
+  overflow: hidden;
   position: relative;
   transition: background .35s;
 }
 
+/*
 .top-line {
   width: 100vw;
   height: 40px;
@@ -43,6 +45,7 @@ body {
   position: fixed;
   bottom: 0;
 }
+*/
 
 .main {
   width: 1588px;
@@ -278,7 +281,8 @@ body {
 }
 
 .footer__btn {
-  background: var(--white);
+  background: var(--black);
+  color: var(--white);
   width: 100px;
   height: 100px;
   transform: translateX(-50%);
@@ -289,7 +293,7 @@ body {
   line-height: 3.5em;
   position: absolute;
   left: 50%;
-  top: -35%;
+  top: -25%;
   transform: translateX(-50%);
 }
 
@@ -298,40 +302,62 @@ body {
 }
 
 .footer__nav {
-  background: var(--white);
+  background: var(--black);
   position: relative;
-  margin: 0 40px;
   width: 100%;
+  height: 160px;
   z-index: 1;
+  overflow: hidden;
 }
 
-.footer__nav__list {
-  display: flex;
+.footer__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: no-gravity 10s infinite;
 }
 
-.footer__nav__list-item {
+.footer__content__def {
+  color: var(--white);
+  font-size: 24px;
   text-align: center;
-  width: 20%;
 }
 
-.footer__nav__list-item a {
-  display: block;
-  line-height: 160px;
-  font-weight: bold;
-  font-size: 36px;
-  transition: background .35s;
+.footer__content__def__term:nth-child(1) {
+  transform: rotate(-23deg);
 }
 
-.footer__nav__list-item:nth-child(1):hover a {
-  background: #FFE9E8;
+.footer__content__def__des:nth-child(2) {
+  transform: rotate(18deg);
 }
 
-.footer__nav__list-item:nth-child(2):hover a {
-  background: #FFF9D9;
+.footer__content__def__term:nth-child(3) {
+  transform: rotate(13deg);
 }
 
-.footer__nav__list-item:nth-child(3):hover a {
-  background: #DFF4FF;
+.footer__content__def__des:nth-child(4) {
+  transform: rotate(-17deg);
+}
+
+.footer__content__def__term:nth-child(5) {
+  transform: rotate(-7deg);
+}
+
+.footer__content__def__des:nth-child(6) {
+  transform: rotate(-17deg);
+}
+
+.footer__content__def__term, .footer__content__def__des {
+  float: left;
+}
+
+.footer__content__def__term {
+  margin-right: 10px;
+}
+
+.footer__content__def__des {
+  margin-right: 30px;
 }
 
 .contact-modal {
@@ -339,8 +365,24 @@ body {
 	top: 25%;
 	left: 25%;
 	right: 25%;
-	background: var(--white);
-	padding: 5%;
+  display: none;
+}
+
+.contact-modal.on {
+  display: block;
+}
+
+.contact-modal__close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 2em;
+}
+
+.contact-modal__content {
+  background: var(--white);
+  padding: 5%;
+  border-radius: 10px;
 }
 
 .form-element {
@@ -351,15 +393,27 @@ body {
 	display: none;
 }
 
-.contact-modal__text {
+.contact-modal__text, .contact-modal__input {
   width: 100%; /* Full width */
   padding: 12px; /* Some padding */ 
   border: 1px solid #ccc; /* Gray border */
   border-radius: 4px; /* Rounded borders */
   box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
+  margin: 10px 0;
   resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+.button-success {
+  display: block;
+  cursor: pointer;
+  width: 260px;
+  height: 65px;
+  margin: 10px auto 0;
+  border: none;
+  outline: none;
+  background: #511252;
+  color: var(--white);
+  font-size: 24px;
 }
 
 .contact-modal__layer {
@@ -372,3 +426,16 @@ body {
 	z-index: -1;
 }
 
+@keyframes no-gravity {
+  0% {
+    top: 30%;
+  }
+  
+  50% {
+    top: 70%;
+  }
+  
+  100% {
+    top: 30%;
+  }
+}
