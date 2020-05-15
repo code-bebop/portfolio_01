@@ -426,6 +426,46 @@ body {
 	z-index: -1;
 }
 
+/* 미디어 쿼리 */
+
+@media all and (max-width: 768px) {
+  html {
+    overflow: auto;
+  }
+  
+  .main {
+    width: 100vw;
+  }
+  
+  .section {
+    display: block;  
+  }
+  
+  .section_info {
+    margin: 0 auto;
+  }
+  
+  .section_work {
+    width: auto;
+    float: none;
+    margin: 0 auto;
+  }
+  
+  
+  .grid-slide {
+    width: 530px;
+  }
+  
+  .work-grid {
+   grid-template-columns: 110px 110px 280px;
+  }
+  
+  
+}
+
+
+/* 키프레임 */
+
 @keyframes no-gravity {
   0% {
     top: 30%;
