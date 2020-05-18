@@ -8,94 +8,101 @@
 </head>
 <body>
   <section class="gallery">
+    <header class="gallery__header">
+      <h1 class="title">작업물 이것저것</h1>
+      <ul class="gallery__list">
+        <li class="gallery__list__item" data-category="all"><a href="">전체</a></li>
+        <li class="gallery__list__item" data-category="figma"><a href="">피그마</a></li>
+        <li class="gallery__list__item" data-category="photoshop"><a href="">포토샵</a></li>
+        <li class="gallery__list__item" data-category="publish"><a href="">퍼블리싱</a></li>
+      </ul>
+    </header>
     <div class="card-box">
-      <div class="card-box__item">
+      <div class="card-box__item" data-category="photoshop">
         <a href="">
           <div class="thumb">
             <img class="card-box__img" src="img/gallery_01.png" alt="">
             <div class="overlay">
               <div class="overlay__text">
                 <p class="text-normal">
-                  화장품
-                  <br/>
                   배너 디자인
                 </p>
+                <p class="text-sub">포토샵</p>
               </div>
             </div>
           </div>
         </a>
       </div>
-      <div class="card-box__item">
+      <div class="card-box__item" data-category="figma">
         <a href="">
           <div class="thumb">
             <img class="card-box__img" src="img/gallery_02.png" alt="">
             <div class="overlay">
               <div class="overlay__text">
                 <p class="text-normal">
-                  화장품
-                  <br/>
                   배너 디자인
                 </p>
+                <p class="text-sub">포토샵</p>
               </div>
             </div>
           </div>
         </a>
       </div>
-      <div class="card-box__item">
+      <div class="card-box__item" data-category="photoshop">
         <a href="">
           <div class="thumb">
             <img class="card-box__img" src="img/gallery_03.png" alt="">
             <div class="overlay">
               <div class="overlay__text">
                 <p class="text-normal">
-                  쇼핑몰
-                  <br/>
                   배너 디자인
                 </p>
+                <p class="text-sub">포토샵</p>
               </div>
             </div>
           </div>
         </a>
       </div>
-      <div class="card-box__item">
+      <div class="card-box__item" data-category="figma">
         <a href="">
           <div class="thumb">
             <img class="card-box__img" src="img/gallery_04.png" alt="">
             <div class="overlay">
               <div class="overlay__text">
                 <p class="text-normal">
-                  생과일 주스
-                  <br/>
                   웹 디자인
                 </p>
+                <p class="text-sub">포토샵</p>
               </div>
             </div>
           </div>
         </a>
       </div>
-      <div class="card-box__item">
+      <div class="card-box__item" data-category="photoshop">
         <a href="">
           <div class="thumb">
             <img class="card-box__img" src="img/gallery_05.png" alt="">
             <div class="overlay">
               <div class="overlay__text">
                 <p class="text-normal">
-                  
+                  배너 디자인
                 </p>
+                <p class="text-sub">포토샵</p>
               </div>
             </div>
           </div>
         </a>
       </div>
-      <div class="card-box__item">
+      <div class="card-box__item" data-category="publish">
         <a href="">
           <div class="thumb">
             <img class="card-box__img" src="img/gallery_06.png" alt="">
             <div class="overlay">
               <div class="overlay__text">
                 <p class="text-normal">
-                  
+                  웹 디자인
                 </p>
+                <p class="text-sub">포토샵</p>
               </div>
             </div>
           </div>
@@ -103,5 +110,8 @@
       </div>
     </div>
   </section>
+
+  <script src="js/gallery.js"></script>
+  
 </body>
 </html>

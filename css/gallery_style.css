@@ -2,16 +2,43 @@ body {
   background: #393e46;
 }
 
+.gallery__header {
+  color: snow;
+  text-align: center;
+  margin: 100px 0 150px;
+}
+
+.title {
+  font-size: 72px;
+  font-weight: 700;
+  margin-bottom: 140px;
+}
+
+.gallery__list__item {
+  display: inline;
+  font-size: 24px;
+}
+
+.gallery__list__item:before {
+  content: '/';
+  margin: 0 50px;
+}
+
+.gallery__list__item:first-child:before {
+  content: '';
+  margin: 0;
+}
+
 .card-box {
   -webkit-column-count: 3;
   -webkit-column-gap: 20px;
   -webkit-column-width: 33.3333%;
-  width: 80%;
-  margin: 0 auto;
+  width: 70%;
+  margin: 10% auto 0;
 }
 
 .card-box__item {
-  margin: 20px 0
+  margin-bottom: 20px;
 }
 
 .thumb {
@@ -43,12 +70,25 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
 }
 
 .text-normal {
-  color: white;
   font-size: 2.5em;
-  text-align: center;
   line-height: 1.3em;
   letter-spacing: -.03em;
+}
+
+.text-normal:after {
+  content: '';
+  display: block;
+  width: 220px;
+  height: 2px;
+  background: #fff;
+  margin: 25px 0;
+}
+
+.text-sub {
+  font-size: 18px;
 }

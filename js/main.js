@@ -1,3 +1,13 @@
+function slideBtnHover() {
+  $(".more-btn").hover((e)=>{
+    $(".more-btn").toggleClass("on");
+  });
+  
+  $(".slide-btn").hover((e)=>{
+    $(e.target).toggleClass("on");
+  })
+}
+
 function contactFormEvent() {
   const openBtn = $(".contact-btn")[0],
     closeBtn = $(".contact-modal__close")[0];
@@ -48,6 +58,7 @@ function init() {
   pagingInfo();
   navFold();
   contactFormEvent();
+  slideBtnHover();
 }
 
 $(document).ready(init());
